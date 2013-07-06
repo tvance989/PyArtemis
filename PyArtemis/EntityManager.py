@@ -60,7 +60,7 @@ class EntityManager(object):
                     event(entity, componentTypes[id])
                 del componentTypes[id]
     def IsActive(self, id):
-        return id in self.activeEntities[id]
+        return id in self.activeEntities
     def AddComponent(self, entity, component):
         componentType = ComponentTypeManager.GetTypeFor(GetClass(component))
         
